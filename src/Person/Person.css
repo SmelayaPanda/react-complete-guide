@@ -6,3 +6,21 @@
     padding: 15px;
     text-align: center;
 }
+
+.Bold {
+    font-weight: bold;
+}
+
+.Background {
+    background: #cccccc;
+}
+
+.PersonBold {
+    composes: Person Bold Background;
+    composes: cursive from global;
+    /*
+     or equivalent =>
+        composes: cursive from './../App.css';
+    */
+    font-size: 18px;
+}
