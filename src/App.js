@@ -1,6 +1,5 @@
 // You will need to import React even if you no use it
 import React, {Component} from 'react';
-import Radium, {StyleRoot} from 'radium'
 import './App.css';
 import Person from './Person/Person'
 
@@ -47,11 +46,7 @@ class App extends Component {
       border: '1px solid blue',
       borderRadius: '5px',
       padding: '8px',
-      cursor: 'pointer',
-      ':hover': {
-        backgroundColor: 'lightgreen',
-        color: 'black'
-      }
+      cursor: 'pointer'
     }
 
     let persons = null
@@ -70,10 +65,6 @@ class App extends Component {
         </div>
       )
       btnStyle.backgroundColor = 'red'
-      btnStyle[':hover'] = {
-        backgroundColor: 'yellow',
-        color: 'black'
-      }
     }
 
     const classes = []
@@ -85,16 +76,14 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
-        <div className="App">
-          <h1>Hi, I'm a react app!</h1>
-          <p className={classes.join(' ')}>This is really works</p>
-          <button style={btnStyle} onClick={this.togglePersonsHandler}>Toggle persons</button>
-          {persons}
-        </div>
-      </StyleRoot>
+      <div className="App">
+        <h1>Hi, I'm a react app!</h1>
+        <p className={classes.join(' ')}>This is really works</p>
+        <button style={btnStyle} onClick={this.togglePersonsHandler}>Toggle persons</button>
+        {persons}
+      </div>
     );
   }
 }
 
-export default Radium(App);
+export default App;
