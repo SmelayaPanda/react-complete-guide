@@ -1,6 +1,6 @@
 // You will need to import React even if you no use it
 import React, {Component} from 'react';
-import './App.css';
+import AppCSS from './App.css';
 import Person from './Person/Person'
 
 class App extends Component {
@@ -69,14 +69,14 @@ class App extends Component {
 
     const classes = []
     if (this.state.persons.length <= 2) {
-      classes.push('red')
+      classes.push(AppCSS.red)
     }
     if (this.state.persons.length <= 1) {
-      classes.push('bold')
+      classes.push(AppCSS.bold)
     }
 
     return (
-      <div className="App">
+      <div className={AppCSS.App}>
         <h1>Hi, I'm a react app!</h1>
         <p className={classes.join(' ')}>This is really works</p>
         <button style={btnStyle} onClick={this.togglePersonsHandler}>Toggle persons</button>
