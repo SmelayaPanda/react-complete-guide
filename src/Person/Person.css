@@ -24,3 +24,9 @@
     */
     font-size: 18px;
 }
+
+@media (min-width: 500px) {
+    .Person {
+        width: 400px;
+    }
+}

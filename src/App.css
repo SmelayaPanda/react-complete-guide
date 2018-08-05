@@ -1,5 +1,28 @@
-:global .App {
+.App {
   text-align: center;
+}
+
+.App button {
+  border: 1px solid black;
+  background: forestgreen;
+  padding: 16px;
+  font: inherit;
+  color: white;
+}
+
+.App button:hover {
+  background: black;
+  cursor: pointer;
+}
+
+.App button.Red {
+  background: indianred;
+  cursor: pointer;
+}
+
+.App button.Red:hover {
+  background: black;
+  cursor: pointer;
 }
 
 .red {
