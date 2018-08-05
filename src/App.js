@@ -1,6 +1,6 @@
 // You will need to import React even if you no use it
 import React, {Component} from 'react';
-import classes from './App.css';
+import styles from './App.css';
 import Person from './Person/Person'
 
 class App extends Component {
@@ -55,19 +55,19 @@ class App extends Component {
           })}
         </div>
       )
-      btnClass = classes.Red
+      btnClass = styles.Red
     }
 
     const pStyle = []
     if (this.state.persons.length <= 2) {
-      pStyle.push(classes.red)
+      pStyle.push(styles.red)
     }
     if (this.state.persons.length <= 1) {
-      pStyle.push(classes.bold)
+      pStyle.push(styles.bold)
     }
 
     return (
-      <div className={classes.App}>
+      <div className={styles.App}>
         <h1>Hi, I'm a react app!</h1>
         <p className={pStyle.join(' ')}>This is really works</p>
         <button className={btnClass} onClick={this.togglePersonsHandler}>Toggle persons</button>

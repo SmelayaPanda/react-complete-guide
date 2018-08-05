@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="97fbc186-298a-47f2-b45c-bb289c917c1a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person/Person.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/Person.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,7 +61,7 @@
           <entry key="eslintrc" value="7" />
           <entry key="js" value="2673" />
           <entry key="json" value="8" />
-          <entry key="txt" value="166" />
+          <entry key="txt" value="191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -72,7 +69,7 @@
           <entry key="CSS" value="564" />
           <entry key="JSON" value="15" />
           <entry key="JavaScript" value="2673" />
-          <entry key="PLAIN_TEXT" value="166" />
+          <entry key="PLAIN_TEXT" value="191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -87,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Person/Person.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            <state relative-caret-position="364">
+              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -271,7 +268,7 @@
       <workItem from="1533272246475" duration="9946000" />
       <workItem from="1533345882377" duration="947000" />
       <workItem from="1533400671240" duration="1236000" />
-      <workItem from="1533444672389" duration="5077000" />
+      <workItem from="1533444672389" duration="5226000" />
     </task>
     <task id="LOCAL-00001" summary="event handlers and css">
       <created>1533281666530</created>
@@ -336,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533450314963</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="dynamic pseudo selectors">
+      <created>1533451974998</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1533451974998</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -354,7 +358,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23960000" />
+    <option name="totallyTimeSpent" value="24109000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -435,7 +439,8 @@
     <MESSAGE value="workspace" />
     <MESSAGE value="eject + css modules" />
     <MESSAGE value="css modules +" />
-    <option name="LAST_COMMIT_MESSAGE" value="css modules +" />
+    <MESSAGE value="dynamic pseudo selectors" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamic pseudo selectors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -581,8 +586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Person/Person.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        <state relative-caret-position="364">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
         </state>
       </provider>
     </entry>
