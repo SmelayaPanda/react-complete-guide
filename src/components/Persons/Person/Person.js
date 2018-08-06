@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import styles from './Person.css'
+import withClass from './../../../hoc/withClass'
+import Aux from './../../../hoc/Aux'
 
 class Person extends Component {
   constructor(props) {
@@ -18,30 +20,15 @@ class Person extends Component {
   render() {
     console.log('[Person.js] Inside render');
     return (
-      <div className={styles.PersonBold}>
+      <Aux>
         <p onClick={this.props.click}>
           I'm a {this.props.name}!
           Age: {this.props.age}
         </p>
         <input type="text" onChange={this.props.changed} value={this.props.name}/>
-      </div>
+      </Aux>
     )
   }
 }
 
-// const person = props => (
-//   // for test ErrorBoundary
-//   // const random = Math.random()
-//   // if (random > 0.7) {
-//   //   throw new Error('Something went wrong')
-//   // }
-//   <div className={styles.PersonBold}>
-//     <p onClick={props.click}>
-//       I'm a {props.name}!
-//       Age: {props.age}
-//     </p>
-//     <input type="text" onChange={props.changed} value={props.name}/>
-//   </div>
-// )
-
-export default Person
+export default withClass(Person, styles.PersonBold)
