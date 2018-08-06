@@ -1,8 +1,8 @@
 // You will need to import React even if you no use it
 import React, {Component} from 'react';
 import styles from './App.css';
-import Person from './Person/Person'
-import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
+import Person from '../components/Persons/Person/Person'
+import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary'
 
 class App extends Component {
   state = {
