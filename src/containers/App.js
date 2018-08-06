@@ -1,8 +1,8 @@
 // You will need to import React even if you no use it
 import React, {Component} from 'react';
 import styles from './App.css';
-import Person from '../components/Persons/Person/Person'
-import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary'
+import Persons from '../components/Persons/Persons'
+import Cockpit from '../components/Cockpit/Cockpit'
 
 class App extends Component {
   state = {
@@ -40,41 +40,20 @@ class App extends Component {
   }
 
   render() {
-    let btnClass = ''
     let persons = null
     if (this.state.showPersons) {
-      persons = (
-        <div>
-          {this.state.persons.map((person, index) => {
-            return (
-              <ErrorBoundary key={person.id}>
-                <Person
-                  age={person.age}
-                  name={person.name}
-                  changed={(event) => this.nameChangedHandler(event, person.id)}
-                  click={() => this.deletePersonHandler(index)}
-                />
-              </ErrorBoundary>
-            )
-          })}
-        </div>
-      )
-      btnClass = styles.Red
-    }
-
-    const pStyle = []
-    if (this.state.persons.length <= 2) {
-      pStyle.push(styles.red)
-    }
-    if (this.state.persons.length <= 1) {
-      pStyle.push(styles.bold)
+      persons = <Persons
+        persons={this.state.persons}
+        changed={this.nameChangedHandler}
+        clicked={this.deletePersonHandler}/>
     }
 
     return (
       <div className={styles.App}>
-        <h1>Hi, I'm a react app!</h1>
-        <p className={pStyle.join(' ')}>This is really works</p>
-        <button className={btnClass} onClick={this.togglePersonsHandler}>Toggle persons</button>
+        <Cockpit
+          persons={this.state.persons}
+          showPersons={this.state.showPersons}
+          clicked={this.togglePersonsHandler}/>
         {persons}
       </div>
     );
