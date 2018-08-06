@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.Cockpit button {
+.Button {
     border: 1px solid black;
     background: forestgreen;
     padding: 16px;
@@ -10,17 +10,17 @@
     color: white;
 }
 
-.Cockpit button:hover {
+.Button:hover {
     background: black;
     cursor: pointer;
 }
 
-.Cockpit button.Red {
+.Button.Red {
     background: indianred;
     cursor: pointer;
 }
 
-.Cockpit button.Red:hover {
+.Button.Red:hover {
     background: black;
     cursor: pointer;
 }
