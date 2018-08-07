@@ -23,6 +23,12 @@ class App extends PureComponent {
     }
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log('[App.js] Inside getDerivedStateFromProps', nextProps, prevState);
+    return prevState
+    // return {[persons: {id: 'asdfgs', name: 'Petr'}]} - new object which can be merged with prevState
+  }
+
   componentWillMount() {
     console.log('[App.js] Inside componentWillMount');
   }
@@ -45,6 +51,11 @@ class App extends PureComponent {
 
   componentWillUpdate(nextProps, nextState) {
     console.log('[UPDATE App.js] Inside componentWillUpdate', nextProps, nextState);
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log('[UPDATE App.js] Inside getSnapshotBeforeUpdate');
+    return null
   }
 
   componentDidUpdate() {
