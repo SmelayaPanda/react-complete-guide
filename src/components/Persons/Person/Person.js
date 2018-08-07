@@ -7,6 +7,7 @@ import Aux from './../../../hoc/Aux'
 class Person extends Component {
   constructor(props) {
     super(props);
+    this.nameInput = React.createRef()
     console.log('[Person.js] Inside Constructor', props)
   }
 
@@ -16,6 +17,9 @@ class Person extends Component {
 
   componentDidMount() {
     console.log('[Person.js] Inside componentDidMount');
+    if (this.props.position === 0 ) {
+      this.nameInput.current.focus()
+    }
   }
 
   render() {
@@ -26,7 +30,11 @@ class Person extends Component {
           I'm a {this.props.name}!
           Age: {this.props.age}
         </p>
-        <input type="text" onChange={this.props.changed} value={this.props.name}/>
+        <input
+          ref={this.nameInput}
+          type="text"
+          onChange={this.props.changed}
+          value={this.props.name}/>
       </Aux>
     )
   }
