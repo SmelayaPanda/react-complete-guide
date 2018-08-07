@@ -24,6 +24,8 @@ const cockpit = props => {
       <h1>Hi, I'm a react app!</h1>
       <p className={pStyle.join(' ')}>This is really works</p>
       <button className={btnClass} onClick={props.clicked}>Toggle persons</button>
+      <br/>
+      <button onClick={props.login}>Log in</button>
     </Aux>
   )
 }

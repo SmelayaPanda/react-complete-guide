@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Person.css'
 import withClass from './../../../hoc/withClass'
 import Aux from './../../../hoc/Aux'
+import {AuthContext} from './../../../containers/App'
 
 class Person extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class Person extends Component {
 
   componentDidMount() {
     console.log('[Person.js] Inside componentDidMount');
-    if (this.props.position === 0 ) {
+    if (this.props.position === 0) {
       this.nameInput.current.focus()
     }
   }
@@ -26,6 +27,9 @@ class Person extends Component {
     console.log('[Person.js] Inside render');
     return (
       <Aux>
+        <AuthContext.Consumer>
+          {auth => auth ? <p>I'm Authenticated!</p> : null}
+        </AuthContext.Consumer>
         <p onClick={this.props.click}>
           I'm a {this.props.name}!
           Age: {this.props.age}
