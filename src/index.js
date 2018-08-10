@@ -27,5 +27,16 @@ axios.interceptors.response.use(response => {
 })
 
 
-ReactDOM.render( <App />, document.getElementById( 'root' ) );
+// // If you may need to remove an interceptor later you can.
+//
+// const myInterceptor = axios.interceptors.request.use(function () {/*...*/
+// });
+// axios.interceptors.request.eject(myInterceptor);
+// // You can add interceptors to a custom instance of axios.
+//
+// const instance = axios.create();
+// instance.interceptors.request.use(function () {/*...*/
+// });
+
+ReactDOM.render(<App/>, document.getElementById('root'));
 registerServiceWorker();
