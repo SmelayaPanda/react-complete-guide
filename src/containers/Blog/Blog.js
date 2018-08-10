@@ -9,7 +9,8 @@ import './Blog.css';
 class Blog extends Component {
   state = {
     posts: [],
-    selectedPostId: null
+    selectedPostId: null,
+    error: false
   }
 
   componentDidMount() {
@@ -21,6 +22,10 @@ class Blog extends Component {
         })
         this.setState({posts: updatedPosts});
       })
+      .catch(err => {
+        this.setState({error: true});
+        console.log(err);
+      })
   }
 
   postSelectedHandler = (id) => {
@@ -28,6 +33,7 @@ class Blog extends Component {
   }
 
   render() {
+    // if error ... do something else
     const posts = this.state.posts.map(post => {
       return <Post
         key={post.id}
