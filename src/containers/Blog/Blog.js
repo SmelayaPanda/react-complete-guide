@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios'
+import axios from '../../axiosInstance'
 
 import Post from '../../components/Post/Post';
 import FullPost from '../../components/FullPost/FullPost';
