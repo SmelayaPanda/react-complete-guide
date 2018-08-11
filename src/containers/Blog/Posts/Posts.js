@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Route} from 'react-router-dom'
+import FullPost from '../FullPost/FullPost'
 import axios from "../../../axiosInstance";
 import Post from '../../../components/Post/Post'
 import './Posts.css'
@@ -10,7 +12,8 @@ class Posts extends Component {
 
   postSelectedHandler = (id) => {
     // this.props.history.push({pathname: '/' + id}) // the same what do Link class
-    this.props.history.push('/' + id) // or simple variant
+    this.setState({selectedPostId: id});
+    this.props.history.push('/posts/' + id) // or simple variant
   }
 
   componentDidMount() {
@@ -32,7 +35,7 @@ class Posts extends Component {
   render() {
     const posts = this.state.posts.map(post => {
       return (
-        // <Link to={'/' + post.id} key={post.id}>
+        // <Link to={'/posts/' + post.id} key={post.id}>
         <Post
           key={post.id}
           title={post.title}
@@ -43,9 +46,12 @@ class Posts extends Component {
     })
 
     return (
-      <section className={'Posts'}>
-        {posts}
-      </section>
+      <div>
+        <section className={'Posts'}>
+          {posts}
+        </section>
+        <Route path={this.props.match.url + '/:id'} exact component={FullPost} />
+      </div>
     );
   }
 }
