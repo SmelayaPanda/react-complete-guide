@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
-import {Route, NavLink, Switch} from 'react-router-dom'
+import {NavLink, Route, Switch} from 'react-router-dom'
 import './Blog.css';
 import Posts from './Posts/Posts'
 // import FullPost from '../Blog/FullPost/FullPost'
 import NewPost from '../../containers/Blog/NewPost/NewPost'
 
 class Blog extends Component {
+  state = {
+    auth: true
+  }
+
   render() {
     return (
       <div className={'Blog'}>
@@ -27,9 +31,14 @@ class Blog extends Component {
         {/*<Route path={'/'} exact render={() => <h1>Home 1</h1>} />*/}
         {/* Switch tells react load only one route at the time - first matched */}
         <Switch>
-          <Route path={'/new-post'} exact component={NewPost} />
-          <Route path={'/posts'} component={Posts} />
+          {this.state.auth ? <Route path={'/new-post'} exact component={NewPost}/> : null}
+          <Route path={'/posts'} component={Posts}/>
           <Route path={'/'} render={() => <h1 style={{textAlign: 'center'}}>Welcome to Home</h1>}/>
+          {/*
+            Catch any unknown routes
+            <Route render={() => <h1>Page not found</h1>}/>
+            Or use <Redirect> component
+          */}
           {/*<Route path={'/:id'} exact component={FullPost} />*/}
         </Switch>
       </div>
