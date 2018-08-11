@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import {NavLink, Route, Switch} from 'react-router-dom'
+import asyncComponent from '../../hoc/asyncComponent'
 import './Blog.css';
-import Posts from './Posts/Posts'
-// import FullPost from '../Blog/FullPost/FullPost'
-import NewPost from '../../containers/Blog/NewPost/NewPost'
+const Posts = asyncComponent(() => import('./Posts/Posts'))
+const NewPost = asyncComponent(() => import('./NewPost/NewPost'))
+// import NewPost from './NewPost/NewPost'
+// asyncComponent do: Webpack create a new chunk which initially not included into main code bundle
+// - reducing init bundle size
+// it allows you to load component when the first time it needed
 
 class Blog extends Component {
   state = {
