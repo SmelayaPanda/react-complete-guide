@@ -22,6 +22,11 @@ const reducer = (state = initState, action) => {
             value: state.counter
           })
     }
+  case 'DELETE_RESULT':
+    return {
+      ...state,
+      results: state.results.filter(el => el.id !== action.payload)
+    }
   default:
     return state
   }
