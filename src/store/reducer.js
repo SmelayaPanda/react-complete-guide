@@ -1,21 +1,27 @@
 const initState = {
-  counter: 0
+  counter: 0,
+  results: []
 }
 
 const reducer = (state = initState, action) => {
   switch (action.type) {
   case 'INCREMENT':
-    return {counter: state.counter + 1}
-    break
+    return {...state, counter: state.counter + 1}
   case 'DECREMENT':
-    return {counter: state.counter - 1}
-    break
+    return {...state, counter: state.counter - 1}
   case 'ADD':
-    return {counter: state.counter + action.value}
-    break
+    return {...state, counter: state.counter + action.value}
   case 'SUBTRACT':
-    return {counter: state.counter - action.value}
-    break
+    return {...state, counter: state.counter - action.value}
+  case 'STORE_RESULT':
+    return {
+      ...state,
+      results:
+          state.results.concat({
+            id: new Date().getTime(),
+            value: state.counter
+          })
+    }
   default:
     return state
   }
